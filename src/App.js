@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import { Fragment, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Home } from 'routes/Home';
+import { About } from 'routes/About';
+import { Iro } from 'routes/Iro';
+import Menu from 'components/Menu';
+import Header from 'components/Header';
+
 import './App.css';
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onClick = () => {
+    console.log('OnClick: ', !isOpen);
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header onClickHandler={onClick} />
+      <Menu isOpen={isOpen} close={onClick} />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/project-iro' element={<Iro />} />
+      </Routes>
+    </>
   );
 }
 
