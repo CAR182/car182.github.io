@@ -1,32 +1,30 @@
-import { Fragment, useState } from 'react';
+import { useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Home } from 'routes/Home';
-import { About } from 'routes/About';
-import { Iro } from 'routes/Iro';
-import Menu from 'components/Menu';
-import Header from 'components/Header';
+import { ThemeContext } from 'contexts/theme';
+import { Header, Footer } from 'components';
+import { Home } from 'containers';
+import { projects } from 'portfolio';
 
 import './App.css';
 
-function App() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const onClick = () => {
-    console.log('OnClick: ', !isOpen);
-    setIsOpen(!isOpen);
-  };
+const App = () => {
+  const [{ themeName }] = useContext(ThemeContext);
 
   return (
-    <>
-      <Header onClickHandler={onClick} />
-      <Menu isOpen={isOpen} close={onClick} />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/project-iro' element={<Iro />} />
-      </Routes>
-    </>
+    <div id='top' className={`${themeName} app`}>
+      <Header />
+      <main>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          {projects.map((project) => (
+            <Route path={`/project-${project.name.toLowerCase()}`} element={project.element} />
+          ))}
+        </Routes>
+      </main>
+
+      <Footer />
+    </div>
   );
-}
+};
 
 export default App;
