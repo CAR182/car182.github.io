@@ -1,0 +1,38 @@
+.projectHeader__img{
+width: 100%;
+}
+
+.projectHeader__info{
+    display: grid;
+   grid-template-columns: 50% 50%;
+
+}
+
+
+.projectHeader__text {
+    display: flex;
+}
+
+.projectHeader__text > h4 > a{
+    margin-left: 10px;
+    font-style: italic;
+}
+
+
+.projectHeader__text > h4 > a ::before{
+   content: "AA";
+}
+
+.projectHeader__links{
+    display: flex;
+    justify-content: flex-end;
+} 
+
+.projectHeader__link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px !important;
+ }
+ 

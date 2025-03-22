@@ -1,4 +1,4 @@
-import { ProjectHeader } from 'components/Projects/ProjectHeader';
+import { ProjectHeader } from 'components';
 
 export default ({ name, banner, reference }) => {
   return (

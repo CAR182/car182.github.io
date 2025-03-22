@@ -4,6 +4,11 @@
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
+  border-radius: 5px;
+}
+
+.project__name{
+  text-transform: uppercase;font-family: inherit;
 }
 
 .project:hover {
@@ -12,6 +17,16 @@
 
 .project__img {
   width: 100%;
+  border-radius: 5PX;
+}
+
+.project__icons {
+  display: flex;
+  justify-content: center;
+}
+.project__icons >a {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 

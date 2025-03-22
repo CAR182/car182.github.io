@@ -1,10 +1,11 @@
 import { ProjectHeader } from 'components/Projects/ProjectHeader';
 
-export default ({ name, banner, reference }) => {
+export default ({ sourceCode, live, banner, reference }) => {
   return (
     <div>
-      <ProjectHeader banner={banner} reference={reference} />
-      <div class='flex-row gap-small'>
+      <ProjectHeader source={sourceCode} live={live} banner={banner} reference={reference} />
+      <div>
+        <h4>Summary</h4>
         <p>
           This project was an exercise piece for myself to explore game development in a different medium and challenge
           myself with something new in React with the constraints of the browser and JS Canvas (and of course I am a
@@ -18,8 +19,8 @@ export default ({ name, banner, reference }) => {
           out to <a href='https://www.spriters-resource.com/game_boy_gbc/pokemonredblue/'>spriters-resource</a>
           for their amazing collection of assets that made this all possible!
         </p>
+        <img class='side-img' src='images/Iro_Layers_1.gif' width='35%' />
       </div>
-      {/* <img class='side-img' src='images/Iro/Layers_Turntable_Black.gif' width='35%' /> */}
     </div>
     // 							<h4> Debugging with Leva?</h4>
     // 							<div class="flex-row gap-small">

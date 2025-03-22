@@ -1,4 +1,4 @@
-import { Leonardo, Angier, Iro, Lamora, Nagata, Kira, Dinah } from 'containers';
+import { Artemis, Leonardo, Angier, Iro, Lamora, Nagata, Kira, Dinah } from 'containers';
 
 const about = {
   // all the properties are optional - can be left empty or deleted
@@ -28,7 +28,15 @@ const projects = [
       link: 'https://www.goodreads.com/book/show/34928122-artemis',
     },
     get element() {
-      return <Angier name={this.name} banner={this.banner} reference={this.reference} />;
+      return (
+        <Artemis
+          sourceCode={this.sourceCode}
+          live={this.livePreview}
+          name={this.name}
+          banner={this.banner}
+          reference={this.reference}
+        />
+      );
     },
   },
   {
@@ -43,13 +51,21 @@ const projects = [
       link: 'https://www.goodreads.com/book/show/239239.The_Prestige',
     },
     get element() {
-      return <Angier name={this.name} banner={this.banner} reference={this.reference} />;
+      return (
+        <Angier
+          sourceCode={this.sourceCode}
+          live={this.livePreview}
+          name={this.name}
+          banner={this.banner}
+          reference={this.reference}
+        />
+      );
     },
   },
   {
     name: 'Iro',
     sourceCode: 'https://github.com/CAR182/Project-Iro',
-    livePreview: '',
+    livePreview: 'test',
     tile: 'tiles/Iro_Tile.png',
     banner: 'banners/Iro_Banner.png',
     reference: {
@@ -58,7 +74,9 @@ const projects = [
       link: 'https://www.goodreads.com/book/show/61261449-titan-hoppers',
     },
     get element() {
-      return <Iro name={this.name} banner={this.banner} reference={this.reference} />;
+      return (
+        <Iro sourceCode={this.sourceCode} live={this.livePreview} banner={this.banner} reference={this.reference} />
+      );
     },
   },
 
@@ -74,7 +92,15 @@ const projects = [
       link: 'https://www.goodreads.com/book/show/34684622-leonardo-da-vinci',
     },
     get element() {
-      return <Leonardo name={this.name} banner={this.banner} reference={this.reference} />;
+      return (
+        <Leonardo
+          sourceCode={this.sourceCode}
+          live={this.livePreview}
+          name={this.name}
+          banner={this.banner}
+          reference={this.reference}
+        />
+      );
     },
   },
   {
@@ -89,7 +115,15 @@ const projects = [
       link: 'https://www.goodreads.com/series/43531-gentleman-bastard',
     },
     get element() {
-      return <Lamora name={this.name} banner={this.banner} reference={this.reference} />;
+      return (
+        <Lamora
+          sourceCode={this.sourceCode}
+          live={this.livePreview}
+          name={this.name}
+          banner={this.banner}
+          reference={this.reference}
+        />
+      );
     },
   },
   {
@@ -104,7 +138,15 @@ const projects = [
       link: 'https://www.goodreads.com/series/56399-the-expanse',
     },
     get element() {
-      return <Nagata name={this.name} banner={this.banner} reference={this.reference} />;
+      return (
+        <Nagata
+          sourceCode={this.sourceCode}
+          live={this.livePreview}
+          name={this.name}
+          banner={this.banner}
+          reference={this.reference}
+        />
+      );
     },
   },
   {
@@ -119,7 +161,15 @@ const projects = [
       link: 'https://www.goodreads.com/series/281543-mortal-techniques',
     },
     get element() {
-      return <Kira name={this.name} banner={this.banner} reference={this.reference} />;
+      return (
+        <Kira
+          sourceCode={this.sourceCode}
+          live={this.livePreview}
+          name={this.name}
+          banner={this.banner}
+          reference={this.reference}
+        />
+      );
     },
   },
   {
@@ -134,7 +184,15 @@ const projects = [
       link: 'https://www.goodreads.com/series/94209-alice-s-adventures-in-wonderland',
     },
     get element() {
-      return <Dinah name={this.name} banner={this.banner} reference={this.reference} />;
+      return (
+        <Dinah
+          sourceCode={this.sourceCode}
+          live={this.livePreview}
+          name={this.name}
+          banner={this.banner}
+          reference={this.reference}
+        />
+      );
     },
   },
 ];

@@ -6,5 +6,6 @@ import { ScrollToTop } from './ScrollToTop/ScrollToTop';
 import { Footer } from './Footer/Footer';
 import { Projects } from './Projects/Projects';
 import { ProjectContainer } from './ProjectContainer/ProjectContainer';
+import { ProjectHeader } from './Projects/ProjectHeader';
 
-export { Header, Navbar, About, Projects, ProjectContainer, ScrollToTop, Contact, Footer };
+export { Header, Navbar, About, Projects, ProjectContainer, ProjectHeader, ScrollToTop, Contact, Footer };

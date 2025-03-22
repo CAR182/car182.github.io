@@ -10,20 +10,22 @@ export const ProjectContainer = ({ project }) => {
 
   return (
     <div className='project' onClick={() => navigate(`/project-${project.name.toLowerCase()}`)}>
-      <h3>{project.name}</h3>
       <img className='project__img' src={project.tile} />
+      <h3 className='project__name'>{project.name}</h3>
 
-      {project.sourceCode && (
-        <a href={project.sourceCode} aria-label='source code' className='link link--icon'>
-          <FontAwesomeIcon icon={faGithub} size='2x' />
-        </a>
-      )}
+      <div className='project__icons'>
+        {project.sourceCode && (
+          <a href={project.sourceCode} aria-label='source code' className='link link--icon'>
+            <FontAwesomeIcon icon={faGithub} size='2x' />
+          </a>
+        )}
 
-      {project.livePreview && (
-        <a href={project.livePreview} aria-label='live preview' className='link link--icon'>
-          <FontAwesomeIcon icon={faGamepad} size='2x' />
-        </a>
-      )}
+        {project.livePreview && (
+          <a href={project.livePreview} aria-label='live preview' className='link link--icon'>
+            <FontAwesomeIcon icon={faGamepad} size='2x' />
+          </a>
+        )}
+      </div>
     </div>
   );
 };
