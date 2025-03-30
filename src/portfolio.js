@@ -38,29 +38,29 @@ const projects = [
       );
     },
   },
-  {
-    name: 'Angier',
-    sourceCode: 'https://github.com/CAR182/Project-Angier',
-    livePreview: '',
-    tile: 'tiles/Angier_Tile.png',
-    banner: 'banners/Angier_Banner.png',
-    reference: {
-      name: 'Robert Angier',
-      title: 'The Prestige',
-      link: 'https://www.goodreads.com/book/show/239239.The_Prestige',
-    },
-    get element() {
-      return (
-        <Angier
-          sourceCode={this.sourceCode}
-          live={this.livePreview}
-          name={this.name}
-          banner={this.banner}
-          reference={this.reference}
-        />
-      );
-    },
-  },
+  // {
+  //   name: 'Angier',
+  //   sourceCode: 'https://github.com/CAR182/Project-Angier',
+  //   livePreview: '',
+  //   tile: 'tiles/Angier_Tile.png',
+  //   banner: 'banners/Angier_Banner.png',
+  //   reference: {
+  //     name: 'Robert Angier',
+  //     title: 'The Prestige',
+  //     link: 'https://www.goodreads.com/book/show/239239.The_Prestige',
+  //   },
+  //   get element() {
+  //     return (
+  //       <Angier
+  //         sourceCode={this.sourceCode}
+  //         live={this.livePreview}
+  //         name={this.name}
+  //         banner={this.banner}
+  //         reference={this.reference}
+  //       />
+  //     );
+  //   },
+  // },
   {
     name: 'Iro',
     description: 'A Pokémon style RPG built in React with the JS Canvas',
