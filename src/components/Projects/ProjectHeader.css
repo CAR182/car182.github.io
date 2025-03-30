@@ -4,18 +4,23 @@ width: 100%;
 
 .projectHeader__info{
     display: grid;
-   grid-template-columns: 50% 50%;
+   grid-template-columns: 70% 30%;
+   align-items: center;
 
 }
 
 
 .projectHeader__text {
     display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .projectHeader__text > h4 > a{
     margin-left: 10px;
     font-style: italic;
+    color: var(--clr-primary);
+    font-weight: bold;
 }
 
 
@@ -35,4 +40,17 @@ width: 100%;
     align-items: center;
     padding: 10px !important;
  }
+
+ 
+@media (max-width: 600px) {
+    .projectHeader__info {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+    }
+
+    .projectHeader__text{
+        font-size: 1em;
+    }
+  }
  

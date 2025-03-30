@@ -4,8 +4,6 @@ const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Chris',
   role: 'Front End Engineer',
-  description:
-    "Hi, i'm Chris. I'm an Engineer for both work and play. I really just love making things! I don’t know about you, but I have a catalogue of unfinished projects littering my personal repository. It’s so easy to start projects but so very difficult to finish them. So I recently decided to pull this space together to share things i'm working on. Enjoy!",
   resume: 'https://example.com',
   social: {
     linkedin: 'https://linkedin.com',
@@ -18,6 +16,7 @@ const projects = [
   // if there are no projects, Projects section won't show up
   {
     name: 'Artemis',
+    description: 'A ThreeJS experiment into a 3D website',
     sourceCode: 'https://github.com/CAR182/Project-Artemis',
     livePreview: '',
     tile: 'tiles/Artemis_Tile.png',
@@ -64,6 +63,7 @@ const projects = [
   },
   {
     name: 'Iro',
+    description: 'A Pokémon style RPG built in React with the JS Canvas',
     sourceCode: 'https://github.com/CAR182/Project-Iro',
     livePreview: 'test',
     tile: 'tiles/Iro_Tile.png',
@@ -82,6 +82,7 @@ const projects = [
 
   {
     name: 'Leonardo',
+    description: 'Jigsaw puzzle app built in Unity',
     sourceCode: '',
     livePreview: '',
     tile: 'tiles/Leonardo_Tile.png',
@@ -105,6 +106,7 @@ const projects = [
   },
   {
     name: 'Lamora',
+    description: 'Experimenting with ThreeJS & the Slack API',
     sourceCode: 'https://github.com/CAR182/Project-Lamora',
     livePreview: '',
     tile: 'tiles/Lamora_Tile.png',
@@ -128,8 +130,7 @@ const projects = [
   },
   {
     name: 'Nagata',
-    sourceCode: '',
-    livePreview: '',
+    description: 'Experimenting with Google Maps 3D data in Blender',
     tile: 'tiles/Nagata_Tile.png',
     banner: 'banners/Nagata_Banner.png',
     reference: {
@@ -138,21 +139,13 @@ const projects = [
       link: 'https://www.goodreads.com/series/56399-the-expanse',
     },
     get element() {
-      return (
-        <Nagata
-          sourceCode={this.sourceCode}
-          live={this.livePreview}
-          name={this.name}
-          banner={this.banner}
-          reference={this.reference}
-        />
-      );
+      return <Nagata name={this.name} banner={this.banner} reference={this.reference} />;
     },
   },
   {
     name: 'Kira',
+    description: 'Disney+ Clone project used for training',
     sourceCode: 'https://github.com/CAR182/Project-Kira',
-    livePreview: '',
     tile: 'tiles/Kira_Tile.png',
     banner: 'banners/Kira_Banner.png',
     reference: {

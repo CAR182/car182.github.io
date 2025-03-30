@@ -12,8 +12,9 @@ export const ProjectContainer = ({ project }) => {
     <div className='project' onClick={() => navigate(`/project-${project.name.toLowerCase()}`)}>
       <img className='project__img' src={project.tile} />
       <h3 className='project__name'>{project.name}</h3>
+      <p>{project.description}</p>
 
-      <div className='project__icons'>
+      {/* <div className='project__icons'>
         {project.sourceCode && (
           <a href={project.sourceCode} aria-label='source code' className='link link--icon'>
             <FontAwesomeIcon icon={faGithub} size='2x' />
@@ -25,7 +26,7 @@ export const ProjectContainer = ({ project }) => {
             <FontAwesomeIcon icon={faGamepad} size='2x' />
           </a>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

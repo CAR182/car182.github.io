@@ -1,47 +1,51 @@
+import { Fragment } from 'react';
 import { ProjectHeader } from 'components/Projects/ProjectHeader';
+import './Projects.css';
 
 export default ({ sourceCode, live, banner, reference }) => {
   return (
-    <div>
+    <Fragment>
       <ProjectHeader source={sourceCode} live={live} banner={banner} reference={reference} />
-      <div>
-        <h4>Summary</h4>
+      <h5>Summary</h5>
+      <section className='summary'>
+        This project was an exercise to explore game development in a different medium and challenge myself with
+        something new in React with the constraints of the browser and JS Canvas. I grew up with the classic Pokémon
+        games so it was fun recreating as much detail as I could whilst keeping a small scope.
+      </section>
+      <h5>Tech Details</h5>
+      <section className='body'>
         <p>
-          This project was an exercise piece for myself to explore game development in a different medium and challenge
-          myself with something new in React with the constraints of the browser and JS Canvas (and of course I am a
-          massive classic Pokémon fan). I could have continued with this project forever, there was so much to add and
-          it was a joy to build, but I had to draw the line somewhere. Alas, Pallet town is the extent of the map but
-          all the interiors are in there!
-          <br></br>I used a tile based design created with <a href='https://www.mapeditor.org/'>Tiled</a> and exported
-          the content to JSON. The App processes the JSON and creates unique elements accordingly splitting them across
-          layers to reduce re-draw. Simple four-point Collision Detection is then used for blocking as well as
-          interacting with Items & NPCs. The Dialogue overlay is pure HTML and sits on top of the Canvas layers. Shout
-          out to <a href='https://www.spriters-resource.com/game_boy_gbc/pokemonredblue/'>spriters-resource</a>
-          for their amazing collection of assets that made this all possible!
+          I created tilemaps using <a href='https://www.mapeditor.org/'>Tiled</a> layers that needed no interaction
+          remained as images, whilst layers that required interaction were exported as JSON.The App processes the JSON
+          and creates unique elements accordingly split across layers to give dimension. Simple four-point Collision
+          Detection is then used against the coordinates to allow interaction with barriers, Items & NPCs. The Dialogue
+          overlay is pure animated HTML and sits on top of the Canvas layers.
+          <p>
+            The Canvas is not a camera, but we need it to feel like one. So we use a simple parallax in which the
+            character remains stationary in the middle of the screen, animating on the spot and chaning direction. The
+            impression of movement comes from the layers moving around the character.
+          </p>
+          <p>
+            I used <a href='https://github.com/pmndrs/leva'>Leva</a> for realtime debugging. I really like this library.
+            It's React Hook system is easy to integrate and allows control at any layer of the App that merges into a
+            single clean menu. When working in the Canvas, the DOM output is an image so debugging is limited an d I
+            used this tool extensively throughout to quickly verify things were working and finalise details.
+          </p>
         </p>
-        <img class='side-img' src='images/Iro_Layers_1.gif' width='35%' />
+        <div className='imageContainer'>
+          <img src='images/Iro/Iro_Layers_1.gif' />
+          <img src='images/Iro/Iro_Layers_2.gif' />
+        </div>
+      </section>
+      <h5>The Result</h5>
+      <div className='centered'>
+        <video src='videos/Iro.mp4' type='video/mp4' controls autoplay muted />
       </div>
-    </div>
-    // 							<h4> Debugging with Leva?</h4>
-    // 							<div class="flex-row gap-small">
-
-    // 								<p>I really like this library. I previously used dat.GUI for 3D work but found it was becoming unkept.
-    // 									Hooking up <a href="https://github.com/pmndrs/leva" >Leva</a>
-    // 									I found that it had all the same features of dat.GUI but was easier to integrate as it utilises the native
-    // 									hook system so you can have controls at any layer of the App and they auto merge into single clean menu.
-    // 									Like working in 3D, the JS Canvas output is an image so debugging is limited and I used this tool extensively
-    // 									throughout to quickly verify things were working and finalise details.
-    // 								</p>
-    // 									<img src="images/Iro/Pokémon-Layers.gif" width="100%"/>
-    // 							</div>
-    // 							<div class="flex-row" style="align-items: center;"><h3> The Result </h3><p>(don't forget the audio!):</p></div>
-    // 							<div class="flex-col">
-    // 								<video controls autoplay muted  style="width:100%">
-    // 									<source src="videos/Iro/Pokémon_React.mp4" type="video/mp4" >
-    // 									Your browser does not support the video tag.
-    // 								</video>
-    // 							</div>
-
-    // 					</div> */}
+      <h5>Credits</h5>
+      <p>
+        Shout out to <a href='https://www.spriters-resource.com/game_boy_gbc/pokemonredblue/'>spriters-resource</a> for
+        their amazing collection of assets that made this all possible!
+      </p>
+    </Fragment>
   );
 };

@@ -1,9 +1,11 @@
-import { ProjectHeader } from 'components';
+import { Fragment } from 'react';
+import { ProjectHeader } from 'components/Projects/ProjectHeader';
+import './Projects.css';
 
-export default ({ name, banner, reference }) => {
+export default ({ banner, reference }) => {
   return (
-    <div>
+    <Fragment>
       <ProjectHeader banner={banner} reference={reference} />
-    </div>
+    </Fragment>
   );
 };
