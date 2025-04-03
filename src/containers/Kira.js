@@ -2,10 +2,10 @@ import { Fragment } from 'react';
 import { ProjectHeader } from 'components/Projects/ProjectHeader';
 import './Projects.css';
 
-export default ({ sourceCode, live, banner, reference }) => {
+export default ({ complete, sourceCode, live, banner, reference }) => {
   return (
     <Fragment>
-      <ProjectHeader source={sourceCode} live={live} banner={banner} reference={reference} />
+      <ProjectHeader complete={complete} source={sourceCode} live={live} banner={banner} reference={reference} />
       <h5>Summary</h5>
       <section className='summary'>
         This project was a training project that I developed to help train some of my junior engineers. This is an

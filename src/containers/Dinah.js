@@ -2,10 +2,10 @@ import { Fragment } from 'react';
 import { ProjectHeader } from 'components/Projects/ProjectHeader';
 import './Projects.css';
 
-export default ({ sourceCode, banner, reference }) => {
+export default ({ complete, sourceCode, banner, reference }) => {
   return (
     <Fragment>
-      <ProjectHeader source={sourceCode} banner={banner} reference={reference} />
+      <ProjectHeader complete={complete} source={sourceCode} banner={banner} reference={reference} />
       <h5>Summary</h5>
       <section className='summary'>
         This was an early Unity based project that I really put a lot of work into, though I was also incredibly

@@ -2,10 +2,10 @@ import { Fragment } from 'react';
 import { ProjectHeader } from 'components/Projects/ProjectHeader';
 import './Projects.css';
 
-export default ({ sourceCode, live, banner, reference }) => {
+export default ({ complete, sourceCode, live, banner, reference }) => {
   return (
     <Fragment>
-      <ProjectHeader source={sourceCode} live={live} banner={banner} reference={reference} />
+      <ProjectHeader complete={complete} source={sourceCode} live={live} banner={banner} reference={reference} />
       <h5>Summary</h5>
       <section className='summary'>
         This project was an exercise to explore game development in a different medium and challenge myself with
@@ -39,7 +39,7 @@ export default ({ sourceCode, live, banner, reference }) => {
       </section>
       <h5>The Result</h5>
       <div className='centered'>
-        <video src='videos/Iro.mp4' type='video/mp4' controls autoplay muted />
+        <video src='videos/Iro.mp4' type='video/mp4' controls autoPlay muted />
       </div>
       <h5>Credits</h5>
       <p>

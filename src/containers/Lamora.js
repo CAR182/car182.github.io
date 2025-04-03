@@ -1,9 +1,9 @@
 import { ProjectHeader } from 'components';
 
-export default ({ sourceCode, banner, reference }) => {
+export default ({ complete, sourceCode, banner, reference }) => {
   return (
     <div>
-      <ProjectHeader source={sourceCode} banner={banner} reference={reference} />
+      <ProjectHeader complete={complete} source={sourceCode} banner={banner} reference={reference} />
       <h5>Summary</h5>
       <section className='summary'>
         This project was an experiment to pull together a number of technologies I wanted to learn more about and

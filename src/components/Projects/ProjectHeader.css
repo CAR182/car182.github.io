@@ -41,6 +41,29 @@ width: 100%;
     padding: 10px !important;
  }
 
+ .status-tag {
+    position: relative;
+    width: 120px;
+    display: inline-flex;
+    height: 25px;
+    padding: 0 10px 0 5px;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    font-weight: bold;
+  }
+ 
+  .status-tag.complete {
+    background: #56ab565e
+  }
+
+  .status-tag.parked {
+    background: #df6d6d94
+  }
+
  
 @media (max-width: 600px) {
     .projectHeader__info {

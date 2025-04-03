@@ -2,10 +2,10 @@ import { Fragment } from 'react';
 import { ProjectHeader } from 'components/Projects/ProjectHeader';
 import './Projects.css';
 
-export default ({ banner, reference }) => {
+export default ({ complete, banner, reference }) => {
   return (
     <Fragment>
-      <ProjectHeader banner={banner} reference={reference} />
+      <ProjectHeader complete={complete} banner={banner} reference={reference} />
       <h5>Summary</h5>
       <section className='summary'>
         This project was a collaboration piece and an attempt to build and release something for mobile on the App

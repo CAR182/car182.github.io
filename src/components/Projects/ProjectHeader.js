@@ -6,10 +6,12 @@ import { contact } from 'portfolio';
 import './ProjectHeader.css';
 import { Fragment } from 'react';
 
-export const ProjectHeader = ({ banner, source, live, reference: { name, title, link } }) => {
+export const ProjectHeader = ({ complete, banner, source, live, reference: { name, title, link } }) => {
   return (
     <Fragment>
       <img className='projectHeader__img' src={banner} alt='' />
+      {complete ? <p className='status-tag complete'>COMPLETE</p> : <p className='status-tag parked'>PARKED</p>}
+
       <div className='projectHeader__info'>
         <div className='projectHeader__text'>
           <h4>

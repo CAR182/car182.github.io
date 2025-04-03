@@ -19,16 +19,18 @@ const projects = [
     description: 'A ThreeJS experiment into a 3D website',
     sourceCode: 'https://github.com/CAR182/Project-Artemis',
     livePreview: '',
+    complete: false,
     tile: 'tiles/Artemis_Tile.png',
     banner: 'banners/Artemis_Banner.png',
     reference: {
-      name: 'Artemis',
+      name: 'The Artemis Moonbase',
       title: 'Artemis',
       link: 'https://www.goodreads.com/book/show/34928122-artemis',
     },
     get element() {
       return (
         <Artemis
+          complete={this.complete}
           sourceCode={this.sourceCode}
           live={this.livePreview}
           name={this.name}
@@ -65,7 +67,8 @@ const projects = [
     name: 'Iro',
     description: 'A Pokémon style RPG built in React with the JS Canvas',
     sourceCode: 'https://github.com/CAR182/Project-Iro',
-    livePreview: 'test',
+    livePreview: '',
+    complete: true,
     tile: 'tiles/Iro_Tile.png',
     banner: 'banners/Iro_Banner.png',
     reference: {
@@ -75,7 +78,13 @@ const projects = [
     },
     get element() {
       return (
-        <Iro sourceCode={this.sourceCode} live={this.livePreview} banner={this.banner} reference={this.reference} />
+        <Iro
+          complete={this.complete}
+          sourceCode={this.sourceCode}
+          live={this.livePreview}
+          banner={this.banner}
+          reference={this.reference}
+        />
       );
     },
   },
@@ -85,6 +94,7 @@ const projects = [
     description: 'Jigsaw puzzle app built in Unity',
     sourceCode: '',
     livePreview: '',
+    complete: false,
     tile: 'tiles/Leonardo_Tile.png',
     banner: 'banners/Leonardo_Banner.png',
     reference: {
@@ -95,6 +105,7 @@ const projects = [
     get element() {
       return (
         <Leonardo
+          complete={this.complete}
           sourceCode={this.sourceCode}
           live={this.livePreview}
           name={this.name}
@@ -109,6 +120,7 @@ const projects = [
     description: 'Experimenting with ThreeJS & the Slack API',
     sourceCode: 'https://github.com/CAR182/Project-Lamora',
     livePreview: '',
+    complete: true,
     tile: 'tiles/Lamora_Tile.png',
     banner: 'banners/Lamora_Banner.png',
     reference: {
@@ -119,6 +131,7 @@ const projects = [
     get element() {
       return (
         <Lamora
+          complete={this.complete}
           sourceCode={this.sourceCode}
           live={this.livePreview}
           name={this.name}
@@ -133,19 +146,21 @@ const projects = [
     description: 'Experimenting with Google Maps 3D data in Blender',
     tile: 'tiles/Nagata_Tile.png',
     banner: 'banners/Nagata_Banner.png',
+    complete: true,
     reference: {
       name: 'Naomi Nagata',
       title: 'The Expanse',
       link: 'https://www.goodreads.com/series/56399-the-expanse',
     },
     get element() {
-      return <Nagata name={this.name} banner={this.banner} reference={this.reference} />;
+      return <Nagata complete={this.complete} name={this.name} banner={this.banner} reference={this.reference} />;
     },
   },
   {
     name: 'Kira',
     description: 'Disney+ Clone project used for training',
     sourceCode: 'https://github.com/CAR182/Project-Kira',
+    complete: true,
     tile: 'tiles/Kira_Tile.png',
     banner: 'banners/Kira_Banner.png',
     reference: {
@@ -156,6 +171,7 @@ const projects = [
     get element() {
       return (
         <Kira
+          complete={this.complete}
           sourceCode={this.sourceCode}
           live={this.livePreview}
           name={this.name}
@@ -169,6 +185,7 @@ const projects = [
     name: 'Dinah',
     sourceCode: '',
     livePreview: '',
+    complete: false,
     tile: 'tiles/Dinah_Tile.jpg',
     banner: 'banners/Dinah_Banner.png',
     reference: {
@@ -179,6 +196,7 @@ const projects = [
     get element() {
       return (
         <Dinah
+          complete={this.complete}
           sourceCode={this.sourceCode}
           live={this.livePreview}
           name={this.name}
