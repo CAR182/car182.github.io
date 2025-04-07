@@ -11,6 +11,9 @@ export default ({ complete, sourceCode, live, banner, reference }) => {
         This project was an exercise to explore game development in a different medium and challenge myself with
         something new in React with the constraints of the browser and JS Canvas. I grew up with the classic Pokémon
         games so it was fun recreating as much detail as I could whilst keeping a small scope.
+        <p>
+          <br></br>This one is almost playable in the browser! i'm just debugging one last issue ...
+        </p>
       </section>
       <h5>Tech Details</h5>
       <section className='body'>
