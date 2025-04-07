@@ -17,7 +17,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           {projects.map((project) => (
-            <Route path={`/project-${project.name.toLowerCase()}`} element={project.element} />
+            <Route path={`/${project.name.toLowerCase()}`} element={project.element} />
           ))}
         </Routes>
       </main>

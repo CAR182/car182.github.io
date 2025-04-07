@@ -9,7 +9,7 @@ export const ProjectContainer = ({ project }) => {
   let navigate = useNavigate();
 
   return (
-    <div className='project' onClick={() => navigate(`/project-${project.name.toLowerCase()}`)}>
+    <div className='project' onClick={() => navigate(`/${project.name.toLowerCase()}`)}>
       <img className='project__img' src={project.tile} />
       <h3 className='project__name'>{project.name}</h3>
       <p>{project.description}</p>
