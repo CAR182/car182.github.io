@@ -12,7 +12,7 @@ export default ({ complete, sourceCode, live, banner, reference }) => {
         something new in React with the constraints of the browser and JS Canvas. I grew up with the classic Pokémon
         games so it was fun recreating as much detail as I could whilst keeping a small scope.
         <p>
-          <br></br>This one is almost playable in the browser! i'm just debugging one last issue ...
+          <br></br>Now playable in the browser! (excuse the bugs!)
         </p>
       </section>
       <h5>Tech Details</h5>

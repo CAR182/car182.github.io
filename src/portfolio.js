@@ -65,9 +65,9 @@ const projects = [
   // },
   {
     name: 'Iro',
-    description: 'A Pokémon style RPG built in React with the JS Canvas',
+    description: 'A Pokémon style RPG built in React with the JS Canvas (Live Demo!)',
     sourceCode: 'https://github.com/CAR182/Project-Iro',
-    livePreview: '',
+    livePreview: 'https://www.c-rayner.com/Project-Iro/',
     complete: true,
     tile: 'tiles/Iro_Tile.png',
     banner: 'banners/Iro_Banner.png',

@@ -29,7 +29,7 @@ export const ProjectHeader = ({ complete, banner, source, live, reference: { nam
             </a>
           )}
           {live && (
-            <a href={live} aria-label='linkedin' className='projectHeader__link link link--icon'>
+            <a target='_blank' href={live} aria-label='linkedin' className='projectHeader__link link link--icon'>
               <FontAwesomeIcon icon={faGamepad} size='2x' />
               <span>Live Demo</span>
             </a>

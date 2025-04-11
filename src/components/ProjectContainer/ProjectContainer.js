@@ -14,19 +14,10 @@ export const ProjectContainer = ({ project }) => {
       <h3 className='project__name'>{project.name}</h3>
       <p>{project.description}</p>
 
-      {/* <div className='project__icons'>
-        {project.sourceCode && (
-          <a href={project.sourceCode} aria-label='source code' className='link link--icon'>
-            <FontAwesomeIcon icon={faGithub} size='2x' />
-          </a>
-        )}
-
-        {project.livePreview && (
-          <a href={project.livePreview} aria-label='live preview' className='link link--icon'>
-            <FontAwesomeIcon icon={faGamepad} size='2x' />
-          </a>
-        )}
-      </div> */}
+      <div className='project__icons'>
+        {project.sourceCode && <FontAwesomeIcon icon={faGithub} size='2x' />}
+        {project.livePreview && <FontAwesomeIcon icon={faGamepad} size='2x' />}
+      </div>
     </div>
   );
 };
