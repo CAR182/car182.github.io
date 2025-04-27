@@ -1,12 +1,14 @@
+import { Fragment, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 
-import { contact } from 'portfolio';
 import './ProjectHeader.css';
-import { Fragment } from 'react';
 
 export const ProjectHeader = ({ complete, banner, source, live, reference: { name, title, link } }) => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <Fragment>
       <img className='projectHeader__img' src={banner} alt='' />
