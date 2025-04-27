@@ -23,13 +23,13 @@ export const ProjectHeader = ({ complete, banner, source, live, reference: { nam
         </div>
         <div className='projectHeader__links'>
           {source && (
-            <a href={source} aria-label='linkedin' className='projectHeader__link link link--icon'>
+            <a target='_blank' href={source} className='projectHeader__link link link--icon'>
               <FontAwesomeIcon icon={faGithubSquare} size='2x' />
               <span>Source Code</span>
             </a>
           )}
           {live && (
-            <a target='_blank' href={live} aria-label='linkedin' className='projectHeader__link link link--icon'>
+            <a target='_blank' href={live} className='projectHeader__link link link--icon'>
               <FontAwesomeIcon icon={faGamepad} size='2x' />
               <span>Live Demo</span>
             </a>
