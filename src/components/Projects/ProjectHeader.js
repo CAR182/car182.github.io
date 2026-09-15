@@ -5,39 +5,53 @@ import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 
 import './ProjectHeader.css';
 
-export const ProjectHeader = ({ complete, banner, source, live, reference: { name, title, link } }) => {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
-  return (
-    <Fragment>
-      <img className='projectHeader__img' src={banner} alt='' />
-      {complete ? <p className='status-tag complete'>COMPLETE</p> : <p className='status-tag parked'>PARKED</p>}
+export const ProjectHeader = ({ status, complete, banner, source, live, reference: { name, title, link } }) => {
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}, []);
 
-      <div className='projectHeader__info'>
-        <div className='projectHeader__text'>
-          <h4>
-            Project Name: {name} -
-            <a href={link} className='link link--icon'>
-              {title}
-            </a>
-          </h4>
-        </div>
-        <div className='projectHeader__links'>
-          {source && (
-            <a target='_blank' href={source} className='projectHeader__link link link--icon'>
-              <FontAwesomeIcon icon={faGithubSquare} size='2x' />
-              <span>Source Code</span>
-            </a>
-          )}
-          {live && (
-            <a target='_blank' href={live} className='projectHeader__link link link--icon'>
-              <FontAwesomeIcon icon={faGamepad} size='2x' />
-              <span>Live Demo</span>
-            </a>
-          )}
-        </div>
-      </div>
-    </Fragment>
-  );
+	const renderSwitch = (status) => {
+		switch (status) {
+			case 'COMPLETE':
+				return <p className='status-tag complete'>COMPLETE</p>;
+			case 'IN PROGRESS':
+				return <p className='status-tag in-progress'>IN PROGRESS</p>;
+			case 'PARKED':
+				return <p className='status-tag parked'>PARKED</p>;
+			default:
+				return <p></p>;
+		}
+	};
+
+	return (
+		<Fragment>
+			<img className='projectHeader__img' src={banner} alt='' />
+			{renderSwitch(status)}
+
+			<div className='projectHeader__info'>
+				<div className='projectHeader__text'>
+					<h4>
+						Project Name: {name} -
+						<a href={link} className='link link--icon'>
+							{title}
+						</a>
+					</h4>
+				</div>
+				<div className='projectHeader__links'>
+					{source && (
+						<a target='_blank' href={source} className='projectHeader__link link link--icon'>
+							<FontAwesomeIcon icon={faGithubSquare} size='2x' />
+							<span>Source Code</span>
+						</a>
+					)}
+					{live && (
+						<a target='_blank' href={live} className='projectHeader__link link link--icon'>
+							<FontAwesomeIcon icon={faGamepad} size='2x' />
+							<span>Live Demo</span>
+						</a>
+					)}
+				</div>
+			</div>
+		</Fragment>
+	);
 };

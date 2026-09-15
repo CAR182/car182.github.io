@@ -1,9 +1,9 @@
 import { ProjectHeader } from 'components';
 
-export default ({ complete, banner, reference }) => {
-  return (
-    <div>
-      <ProjectHeader complete={complete} banner={banner} reference={reference} />
-    </div>
-  );
+export default ({ status, banner, reference }) => {
+	return (
+		<div>
+			<ProjectHeader status={status} banner={banner} reference={reference} />
+		</div>
+	);
 };

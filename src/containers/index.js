@@ -7,5 +7,7 @@ import Nagata from './Nagata';
 import Kira from './Kira';
 import Dinah from './Dinah';
 import Artemis from './Artemis';
+import Emil from './Emil';
+import Viv from './Viv';
 
-export { Home, Artemis, Iro, Angier, Leonardo, Lamora, Nagata, Kira, Dinah };
+export { Home, Viv, Emil, Artemis, Iro, Angier, Leonardo, Lamora, Nagata, Kira, Dinah };
